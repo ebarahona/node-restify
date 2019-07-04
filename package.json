@@ -74,7 +74,8 @@
     "restify-errors": "^4.2.3",
     "semver": "^5.0.1",
     "spdy": "^3.3.3",
-    "vasync": "^1.6.4"
+    "vasync": "^1.6.4",
+    "snyk": "^1.189.0"
   },
   "optionalDependencies": {
     "dtrace-provider": "^0.6.0"
@@ -93,6 +94,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "make prepush"
-  }
+    "test": "make prepush",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
